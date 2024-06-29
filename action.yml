@@ -1,0 +1,19 @@
+name: 'Load Ansible inventory from S3'
+description: 'Loads an Ansible inventory from a file structure on S3 and adjusts paths to referenced ssh keys and config'
+author: 'Sovarto GmbH'
+
+branding:
+  icon: 'cloud'
+  color: 'blue'
+
+inputs:
+  s3-bucket:
+    description: ''
+    required: true
+  s3-folder:
+    description: ''
+    required: true
+
+runs:
+  using: node20
+  main: dist/index.js
